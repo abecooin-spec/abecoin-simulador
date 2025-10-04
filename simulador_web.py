@@ -173,7 +173,7 @@ def header():
         <div class="abecoin-header">
             <img src="data:image/png;base64,{_get_logo_base64()}" class="abecoin-logo"/>
             <div>
-                <p class="abecoin-title">Abecoin</p>
+                <p class="abecoin-title">ABECOIN</p>
                 <div style="font-size:14px;">Simulador de préstamos — Cooperativa Abecoin</div>
             </div>
         </div>
@@ -253,7 +253,7 @@ with col2:
 # SIDEBAR: HISTORIAL Y CONTACTO
 # --------------------------
 st.sidebar.image(LOGO_PATH, width=120)
-st.sidebar.markdown("# Abecoin")
+st.sidebar.markdown("# ABECOIN")
 st.sidebar.markdown("Cooperativa de Ahorro y Crédito")
 st.sidebar.markdown("---")
 st.sidebar.markdown("### Contacto")
