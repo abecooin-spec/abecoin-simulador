@@ -94,7 +94,7 @@ def generar_cronograma(nombre, dni, direccion, capital, cuotas, degrav_mode="pro
         cuota_base = round(amortizacion + interes_semanal, 2)
         cuota_final = round(cuota_base + degrav, 2)
         vencimiento = (hoy + timedelta(weeks=i)).strftime("%d/%m/%Y")
-        estado = "PENDIENTE" if i > 1 else "CANCELADO"  # ejemplo
+        estado = "PENDIENTE" if i > 1 else "PENDIENTE"  # ejemplo
         filas.append({
             "N° Cuota": i,
             "Fecha Venc.": vencimiento,
