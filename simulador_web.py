@@ -109,7 +109,7 @@ for i in range(1, cuotas + 1):
     saldo = round(saldo - amortizacion, 2)
 
 df = pd.DataFrame(filas)
-    resumen = {
+resumen = {
         "Nombre": nombre,
         "DNI": dni,
         "Dirección": direccion,
