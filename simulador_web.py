@@ -88,17 +88,16 @@ def generar_cronograma(nombre, dni, direccion, capital, cuotas, degrav_mode="pro
     hoy = datetime.today()
     saldo = capital
     filas = []
-    for i in range(1, cuotas + 1):
+for i in range(1, cuotas + 1):
     degrav = prorrateos[i-1]
     cuota_base = round(amortizacion + interes_semanal, 2)
     cuota_final = round(cuota_base + degrav, 2)
     vencimiento = (hoy + timedelta(weeks=i)).strftime("%d/%m/%Y")
     estado = "PENDIENTE"
-
     filas.append({
         "N° Cuota": i,
         "Fecha Venc.": vencimiento,
-        "Saldo Capital": round(saldo, 2),  # 👈 ahora se muestra el saldo ANTES de restar
+        "Saldo Capital": round(saldo, 2),
         "Amortización": amortizacion,
         "Interés": interes_semanal,
         "Cuota Base": cuota_base,
@@ -107,10 +106,9 @@ def generar_cronograma(nombre, dni, direccion, capital, cuotas, degrav_mode="pro
         "Estado": estado
     })
 
-    saldo = round(saldo - amortizacion, 2)  # 👈 ahora se descuenta DESPUÉS
+    saldo = round(saldo - amortizacion, 2)
 
-
-    df = pd.DataFrame(filas)
+df = pd.DataFrame(filas)
     resumen = {
         "Nombre": nombre,
         "DNI": dni,
